@@ -12,7 +12,8 @@
     uri: git@github.com:osuapplevision/millrace_moveit_config.git
 - git:
     local-name: rviz_camera_stream
-    uri: https://github.com/lucasw/rviz_camera_stream.git
+    uri: git@github.com:osuapplevision/rviz_camera_stream.git
+    version: applevision-noetic-devel
 - git:
     local-name: rviz_lighting
     uri: https://github.com/mogumbo/rviz_lighting.git
