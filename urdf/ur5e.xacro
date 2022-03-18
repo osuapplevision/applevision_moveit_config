@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5e_robot">
+  <!--
+    This is a convenience top-level xacro which loads the macro for the UR5e
+    which defines the default values for the various "parameters files"
+    parameters for a UR5e.
+
+    This file is only useful when loading a stand-alone, completely isolated
+    robot with only default values for all parameters such as the kinematics,
+    visual and physical parameters and joint limits.
+
+    This file is not intended to be integrated into a larger scene or other
+    composite xacro.
+
+    Instead, xacro:include 'inc/ur5e_macro.xacro' and override the defaults
+    for the arguments to that macro.
+
+    Refer to 'inc/ur_macro.xacro' for more information.
+  -->
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/inc/ur5e_macro.xacro"/>
+  <xacro:ur5e_robot prefix=""/>
+
+  <!--  Tables and Walls -->
+  <xacro:include filename="$(find millrace_moveit_config)/urdf/tables_v2.urdf.xacro" />
+  <xacro:tables />
+
+  <!-- In addition to the above, we would also like to define a table and some more joints -->
+  <link name="world" />
+  <link name="palm" />
+
+  <!-- Describe the interface between the robot and the gripper -->
+  <joint name="robotiq_coupler_joint" type="fixed">
+    <parent link="tool0" />
+    <child link="lisas_hand" />
+    <origin xyz="-0.0675 0.0675 0.004" rpy="0 0 ${-pi/2.0}" />
+  </joint>
+
+  <!-- Describe the interface between the world and the tables -->
+  <joint name="world_big_table" type="fixed">
+    <parent link="world" />
+    <child link="big_table" />
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+  </joint>
+
+  <joint name="world_small_table" type="fixed">
+    <parent link="world" />
+    <child link="small_table" />
+    <origin xyz="-0.21 -1.32 0" rpy="0 0 1.5708" />
+  </joint>
+
+  <!-- Describe the interface between the world and the Apple Proxy -->
+  <joint name = "bigTable_simpleProxy" type="fixed"> -->
+    <parent link = "big_table" /> -->
+    <child link = "apple_proxy" /> -->
+    <origin xyz = "0.09 0.81 0.975" rpy="1.5708 0 -1.5708" />
+  </joint>
+
+  <!-- Describe the interface between the world and the robot" -->
+  <joint name="world_joint" type="fixed">
+    <parent link="small_table" />
+    <child link = "base_link" />
+    <origin xyz="0.355 0.357 0.86" rpy="0.0 0.0 3.1416" />
+  </joint>
+
+  <!-- Describe the location of the palm -->
+  <joint name="hand_palm" type="fixed">
+    <parent link="tool0" />
+    <child link="palm" />
+  <!--    <origin xyz="0 0 0.13" rpy="0 0 0.2618 " />      &lt;!&ndash; Add in Z the hand's thickness (approx 13cm) &ndash;&gt;-->
+    <origin xyz="0 0 0.165" rpy="0 0 0.2618 " />      <!-- Add in Z the hand's thickness (approx 13cm) -->
+  </joint>
+
+
+</robot>
