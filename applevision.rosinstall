@@ -1,0 +1,18 @@
+- git:
+    local-name: Universal_Robots_ROS_Driver
+    uri: https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git
+- git:
+    local-name: applevision_rospkg
+    uri: git@github.com:osuapplevision/applevision_rospkg.git
+- git:
+    local-name: fmauch_universal_robot
+    uri: https://github.com/fmauch/universal_robot.git
+- git:
+    local-name: millrace_moveit_config
+    uri: git@github.com:osuapplevision/millrace_moveit_config.git
+- git:
+    local-name: rviz_camera_stream
+    uri: https://github.com/lucasw/rviz_camera_stream.git
+- git:
+    local-name: rviz_lighting
+    uri: https://github.com/mogumbo/rviz_lighting.git
