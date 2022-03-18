@@ -80,38 +80,35 @@
       </collision>
     </link>
 
+    <link name="apple_stem" >
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://millrace_moveit_config/meshes/apple_proxy/visual/Stem_v4.STL" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="Orange">
+          <color rgba="1 0.65 0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://millrace_moveit_config/meshes/apple_proxy/collision/Proxy_V1_collision.STL" scale="0.001 0.001 0.001"/>-->
+        </geometry>
+      </collision>
+    </link>
 
-<!--    <link name="apple_stem" >-->
-<!--      <visual>-->
-<!--        <origin xyz="0 0 0" rpy="0 0 0"/>-->
-<!--        <geometry>-->
-<!--          <mesh filename="package://millrace_moveit_config/meshes/millrace_moveit_config/visual/Stem_v4.STL" scale="0.001 0.001 0.001"/>-->
-<!--        </geometry>-->
-<!--        <material name="Orange">-->
-<!--          <color rgba="1 0.65 0 1.0"/>-->
-<!--        </material>-->
-<!--      </visual>-->
-<!--      <collision>-->
-<!--        <origin xyz="0 0 0" rpy="0 0 0"/>-->
-<!--        <geometry>-->
-<!--          <mesh filename="package://millrace_moveit_config/meshes/millrace_moveit_config/collision/Proxy_V1_collision.STL" scale="0.001 0.001 0.001"/>-->
-<!--        </geometry>-->
-<!--      </collision>-->
-<!--    </link>-->
-
-<!--    <link name="apple" >-->
-<!--      <visual>-->
-<!--        <origin xyz="0 0 0" rpy="0 0 0"/>-->
-<!--        <geometry>-->
-<!--          <mesh filename="package://millrace_moveit_config/meshes/millrace_moveit_config/visual/SubAssem_Apple_V4.STL" scale="0.001 0.001 0.001"/>-->
-<!--        </geometry>-->
-<!--        <material name="Red">-->
-<!--          <color rgba="1.0 0.0 0.0 1.0"/>-->
-<!--        </material>-->
-<!--      </visual>-->
-<!--    </link>-->
-
-
+    <link name="apple" >
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://millrace_moveit_config/meshes/apple_proxy/visual/SubAssem_Apple_V4.STL" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="Red">
+          <color rgba="1.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+    </link>
 
   </xacro:macro>
 </robot>

@@ -35,7 +35,3 @@ roslaunch millrace_moveit_config ur5e_moveit_planning_execution.launch
 # terminal 3
 roslaunch millrace_moveit_config moveit_rviz.launch config:=true
 ```
-
-## Known issues
-
- * Starting position of the robot in simulation mode doesn't work.

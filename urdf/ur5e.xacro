@@ -21,13 +21,13 @@
   <xacro:include filename="$(find ur_description)/urdf/inc/ur5e_macro.xacro"/>
   <xacro:ur5e_robot prefix=""/>
 
-  <!--  Tables and Walls -->
-  <xacro:include filename="$(find millrace_moveit_config)/urdf/tables_v2.urdf.xacro" />
-  <xacro:tables />
-
   <!-- In addition to the above, we would also like to define a table and some more joints -->
   <link name="world" />
   <link name="palm" />
+
+  <!--  Tables and Walls -->
+  <xacro:include filename="$(find millrace_moveit_config)/urdf/tables_v2.urdf.xacro" />
+  <xacro:tables />
 
   <!-- Describe the interface between the robot and the gripper -->
   <joint name="robotiq_coupler_joint" type="fixed">
@@ -71,5 +71,18 @@
     <origin xyz="0 0 0.165" rpy="0 0 0.2618 " />      <!-- Add in Z the hand's thickness (approx 13cm) -->
   </joint>
 
+  <joint name = "proxy_stem" type="fixed">
+    <parent link = "apple_proxy" />
+    <child link = "apple_stem" />
+    <!-- <origin xyz = "0.16 0.45 2.42" rpy="0 3.1416 0.0" /> -->
+    <origin xyz = "0.3 0.25 0.25" rpy="1.5708 0 0" />
+  </joint>
+  
+  <joint name = "stem_apple" type="fixed">
+    <parent link = "apple_stem" />
+    <child link = "apple" />
+    <!-- <origin xyz = "-0.04 -0.03 -2.08" rpy="0 0.0 0.0" /> -->
+    <origin xyz = "-0.04 -0.03 0.03" rpy="0 0 0" />
+  </joint>
 
 </robot>
