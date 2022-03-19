@@ -17,3 +17,6 @@
 - git:
     local-name: rviz_lighting
     uri: https://github.com/mogumbo/rviz_lighting.git
+- git:
+    local-name: vision_opencv
+    uri: https://github.com/ros-perception/vision_opencv.git
