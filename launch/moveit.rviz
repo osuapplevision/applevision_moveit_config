@@ -1,17 +1,20 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 75
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1/Scene Geometry1
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
+        - /CameraPub1
+        - /MarkerArray1
         - /Range1
         - /PoseWithCovariance1
         - /PoseWithCovariance1/Covariance1
+        - /Image1
       Splitter Ratio: 0.5
-    Tree Height: 90
+    Tree Height: 165
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -368,7 +371,7 @@ Visualization Manager:
       Enabled: true
       Frame Rate: 30
       Image Encoding: rgb8
-      Image Topic: /palm_camera/image
+      Image Topic: /palm_camera/image_raw
       Name: CameraPub
       Near Clip Distance: 0.009999999776482582
       Queue Size: 2
@@ -466,7 +469,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: palm_camera/image
+      Image Topic: palm_camera/image_rect_color
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -560,7 +563,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.716314673423767
+      Distance: 2.1219425201416016
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -575,10 +578,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.25979629158973694
+      Pitch: 0.18979622423648834
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.4285330772399902
+      Yaw: 3.0385329723358154
     Saved: ~
 Window Geometry:
   Displays:
@@ -602,5 +605,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 2560
-  X: 8
-  Y: 908
+  X: 0
+  Y: 877

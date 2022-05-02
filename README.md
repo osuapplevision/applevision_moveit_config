@@ -4,18 +4,36 @@ This ROS package contains (in theory) everything needed to mimic the behavior of
 
 ## Setup
 
+TODO: cleanup
+
 You can install this package and it's dependencies as follows:
 0. Make sure git is setup with SSH authentication, otherwise cloning the private repositories will fail.
 1. Grab a copy of [`applevision.rosinstall`](./applevision.rosinstall).
 2. Run the following to clone everything into your workspace using [wstool](http://wiki.ros.org/wstool), install dependencies, and build:
 ```sh
 # in catkin_ws
+catkin init
+source devel/setup.bash
+catkin build
+
+
+
 wstool init src
 wstool merge -t src applevision.rosinstall
 wstool update -t src
 rosdep install -y --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so
+
+cd /usr/lib/x86_64-linux-gnu
+sudo ln -s libboost_python3.a libboost_python37.a
+sudo ln -s libboost_python3.so libboost_python37.so
+pip3 install --upgrade pip
+pip3 install empy
+sudo apt install ros-melodic-moveit
+pip3 install numpy opencv-python-headless
+
 catkin build
+
 # OR
 catkin_make
 ```

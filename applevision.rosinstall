@@ -7,6 +7,7 @@
 - git:
     local-name: fmauch_universal_robot
     uri: https://github.com/fmauch/universal_robot.git
+    version: calibration_devel
 - git:
     local-name: millrace_moveit_config
     uri: git@github.com:osuapplevision/millrace_moveit_config.git
