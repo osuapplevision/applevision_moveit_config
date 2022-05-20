@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
-project(millrace_moveit_config)
+project(applevision_moveit_config)
 
 find_package(catkin REQUIRED COMPONENTS roslaunch)
 
