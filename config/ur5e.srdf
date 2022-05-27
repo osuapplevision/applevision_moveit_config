@@ -28,17 +28,25 @@
         <joint name="wrist_3_joint" value="0" />
     </group_state>
     <group_state name="up" group="manipulator">
+        <joint name="shoulder_pan_joint" value="-3.79" />
+        <joint name="shoulder_lift_joint" value="-2.04" />
+        <joint name="elbow_joint" value="2.37" />
+        <joint name="wrist_1_joint" value="-0.34" />
+        <joint name="wrist_2_joint" value="0.90" />
+        <joint name="wrist_3_joint" value="2.87" />
+    </group_state>
+    <!-- <group_state name="up_old" group="manipulator">
         <joint name="shoulder_pan_joint" value="-3.52" />
         <joint name="shoulder_lift_joint" value="-1.62" />
         <joint name="elbow_joint" value="2.08" />
         <joint name="wrist_1_joint" value="-0.46" />
         <joint name="wrist_2_joint" value="1.17" />
-        <joint name="wrist_3_joint" value="3.14" />
-    </group_state>
+        <joint name="wrist_3_joint" value="2.87" />
+    </group_state> -->
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="moveit_ee" parent_link="tool0" group="endeffector" />
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="fix_joint" type="fixed" parent_frame="world" child_link="world" />
+    <virtual_joint name="fix_joint" type="fixed" parent_frame="base_link" child_link="world" />
 
     <!-- PASSIVE JOINTS -->
     <passive_joint name="world_big_table" />
