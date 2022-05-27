@@ -29,11 +29,11 @@
     </group_state>
     <group_state name="up" group="manipulator">
         <joint name="shoulder_pan_joint" value="-3.79" />
-        <joint name="shoulder_lift_joint" value="-2.04" />
-        <joint name="elbow_joint" value="2.37" />
-        <joint name="wrist_1_joint" value="-0.34" />
-        <joint name="wrist_2_joint" value="0.90" />
-        <joint name="wrist_3_joint" value="2.87" />
+        <joint name="shoulder_lift_joint" value="-2.09" />
+        <joint name="elbow_joint" value="2.15" />
+        <joint name="wrist_1_joint" value="-0.052" />
+        <joint name="wrist_2_joint" value="0.91" />
+        <joint name="wrist_3_joint" value="3.87" />
     </group_state>
     <!-- <group_state name="up_old" group="manipulator">
         <joint name="shoulder_pan_joint" value="-3.52" />

@@ -40,7 +40,7 @@
   <joint name="world_big_table" type="fixed">
     <parent link="world" />
     <child link="big_table" />
-    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <origin xyz="0 0 0.145" rpy="0 0 1.5708" />
   </joint>
 
   <joint name="world_small_table" type="fixed">
@@ -69,14 +69,14 @@
     <child link="palm" />
     <!--    <origin xyz="0 0 0.13" rpy="0 0 0.2618 " />      &lt;!&ndash; Add in Z the hand's thickness (approx 13cm) &ndash;&gt;-->
     <!--  <origin xyz="0 0 0.165" rpy="0 0 0.2618 " /> -->     <!-- Add in Z the hand's thickness (approx 13cm) -->
-    <origin xyz="0 0 0.05" rpy="0 0 0.2618 "/>     <!-- Add in Z the hand's thickness (approx 5cm) -->
+    <origin xyz="0 0 0.05" rpy="0 0 5.55"/>     <!-- Add in Z the hand's thickness (approx 5cm) -->
   </joint>
 
   <joint name = "proxy_stem" type="fixed">
     <parent link = "apple_proxy" />
     <child link = "apple_stem" />
     <!-- <origin xyz = "0.16 0.45 2.42" rpy="0 3.1416 0.0" /> -->
-    <origin xyz = "0.2 0.25 0.25" rpy="1.5708 0 0" />
+    <origin xyz = "0.3 0.25 0.25" rpy="1.5708 0 0" />
   </joint>
   
   <joint name = "stem_apple" type="fixed">
