@@ -1,5 +1,5 @@
 <launch>
-
+  <arg name="load_robot_description" default="true"/>
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
   <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
@@ -12,3 +12,14 @@
         args="$(arg command_args)" output="screen">
   </node>
 </launch>
+
+<!-- Specify planning pipeline
+dont start database
+allow database location specifies
+not in debug mode
+load/override robot_description
+hide joint state publisher's GUI (use_rviz)
+robot_state_publisher
+YES run move group
+run moveit_rviz.launch
+start mongodb -->

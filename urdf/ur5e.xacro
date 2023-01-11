@@ -18,16 +18,18 @@
     Refer to 'inc/ur_macro.xacro' for more information.
   -->
   <!-- common stuff -->
+  
+
   <xacro:include filename="$(find ur_description)/urdf/inc/ur5e_macro.xacro"/>
   <xacro:ur5e_robot prefix=""/>
+
+   <!--  Tables and Walls -->
+  <xacro:include filename="$(find applevision_moveit_config)/urdf/tables_v2.urdf.xacro" />
+  <xacro:tables />
 
   <!-- In addition to the above, we would also like to define a table and some more joints -->
   <link name="world" />
   <link name="palm" />
-
-  <!--  Tables and Walls -->
-  <xacro:include filename="$(find applevision_moveit_config)/urdf/tables_v2.urdf.xacro" />
-  <xacro:tables />
 
   <!-- Describe the interface between the robot and the gripper -->
   <!-- <joint name="robotiq_coupler_joint" type="fixed">
@@ -40,20 +42,20 @@
   <joint name="world_big_table" type="fixed">
     <parent link="world" />
     <child link="big_table" />
-    <origin xyz="0 0 0.145" rpy="0 0 1.5708" />
+    <origin xyz="-.01 0 0.145" rpy="0 0 1.5708" />
   </joint>
 
   <joint name="world_small_table" type="fixed">
     <parent link="world" />
     <child link="small_table" />
-    <origin xyz="-0.21 -1.32 0" rpy="0 0 1.5708" />
+    <origin xyz="-0.21 -1.37 0" rpy="0 0 1.5708" />
   </joint>
 
   <!-- Describe the interface between the world and the Apple Proxy -->
   <joint name = "bigTable_simpleProxy" type="fixed"> -->
     <parent link = "big_table" /> -->
     <child link = "apple_proxy" /> -->
-    <origin xyz = "0.09 0.81 0.975" rpy="1.5708 0 -1.5708" />
+    <origin xyz = ".48 .8 .95" rpy="1.5708 0 -1.5708" />
   </joint>
 
   <!-- Describe the interface between the world and the robot" -->
@@ -67,18 +69,25 @@
   <joint name="hand_palm" type="fixed">
     <parent link="tool0" />
     <child link="palm" />
-    <!--    <origin xyz="0 0 0.13" rpy="0 0 0.2618 " />      &lt;!&ndash; Add in Z the hand's thickness (approx 13cm) &ndash;&gt;-->
-    <!--  <origin xyz="0 0 0.165" rpy="0 0 0.2618 " /> -->     <!-- Add in Z the hand's thickness (approx 13cm) -->
-    <origin xyz="0 0 0.05" rpy="0 0 5.55"/>     <!-- Add in Z the hand's thickness (approx 5cm) -->
+<!--        <origin xyz="0 0 0.13" rpy="0 0 0.2618 " />      &lt;!&ndash; Add in Z the hand's thickness (approx 13cm) &ndash;&gt;-->
+    <origin xyz="0 0 0" rpy="0 0 0.2618 " />      <!-- Add in Z the hand's thickness (approx 13cm) -->
   </joint>
+
+  <!-- <joint name = "apple_proxy" type = "fixed">
+    <parent link = "base_link" />
+    <child link = "apple_proxy" />
+    <! <origin xyz = "0.16 0.45 2.42" rpy="0 3.1416 0.0" /> -->
+    <!-- <origin xyz = "0.3 0.27 0.75" rpy="1.5708 0 0" /> -->
+  <!--</joint> -->
 
   <joint name = "proxy_stem" type="fixed">
     <parent link = "apple_proxy" />
     <child link = "apple_stem" />
     <!-- <origin xyz = "0.16 0.45 2.42" rpy="0 3.1416 0.0" /> -->
-    <origin xyz = "0.3 0.25 0.25" rpy="1.5708 0 0" />
+    <!-- <origin xyz = "0 0 -.05" rpy="1.5708 0 0" /> -->
+    <origin xyz = ".225 .35 .73" rpy="1.5708 0 0" />
   </joint>
-  
+
   <joint name = "stem_apple" type="fixed">
     <parent link = "apple_stem" />
     <child link = "apple" />
