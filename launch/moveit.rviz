@@ -17,7 +17,6 @@ Panels:
         - /PoseWithCovariance1
         - /PoseWithCovariance1/Covariance1
         - /Image1
-        - /Image1/Status1
         - /Image2
       Splitter Ratio: 0.5307262539863586
     Tree Height: 232
@@ -138,6 +137,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          lisas_hand:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -271,6 +275,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          lisas_hand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           palm:
             Alpha: 1
             Show Axes: false
@@ -323,7 +332,7 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: apple_stem
+      Reference Frame: big_table
       Value: true
     - Class: rviz/Axes
       Enabled: true
@@ -476,7 +485,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
     - Class: rviz/Image
-      Enabled: false
+      Enabled: true
       Image Topic: palm_camera/image_rect_color
       Max Value: 1
       Median window: 5
@@ -486,7 +495,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: false
+      Value: true
     - Class: rviz/TF
       Enabled: false
       Frame Timeout: 15
@@ -502,7 +511,7 @@ Visualization Manager:
       Update Interval: 0
       Value: false
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /applevision/debug_apple_camera
       Max Value: 1
       Median window: 5
@@ -512,7 +521,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Axes Length: 1
       Axes Radius: 0.10000000149011612
@@ -578,18 +587,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.5658795237541199
-        Y: -0.32138702273368835
-        Z: 0.48191723227500916
+        X: 1.3158326148986816
+        Y: -0.4399484694004059
+        Z: 0.23192907869815826
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.019796222448349
+      Pitch: 0.27479609847068787
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.5935468673706055
+      Yaw: 4.648553371429443
     Saved: ~
 Window Geometry:
   Displays:
