@@ -11,6 +11,9 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /Axes1
         - /Axes2
+        - /Axes3
+        - /Axes4
+        - /Axes5
         - /CameraPub1
         - /MarkerArray1
         - /Range1
@@ -38,7 +41,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: Image
   - Class: rviz/Help
     Name: Help
 Preferences:
@@ -332,36 +335,36 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: big_table
+      Reference Frame: palm
       Value: true
     - Class: rviz/Axes
       Enabled: true
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: apple_proxy
+      Reference Frame: palm_camera
       Value: true
     - Class: rviz/Axes
-      Enabled: false
+      Enabled: true
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: small_table
-      Value: false
+      Reference Frame: tool0
+      Value: true
     - Class: rviz/Axes
-      Enabled: false
+      Enabled: true
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: apple_proxy
-      Value: false
+      Reference Frame: world
+      Value: true
     - Class: rviz/Axes
-      Enabled: false
+      Enabled: true
       Length: 0.5
       Name: Axes
       Radius: 0.009999999776482582
       Reference Frame: base_link
-      Value: false
+      Value: true
     - Class: rviz/Axes
       Enabled: false
       Length: 0.5
@@ -485,7 +488,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: palm_camera/image_rect_color
       Max Value: 1
       Median window: 5
@@ -495,7 +498,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: false
       Frame Timeout: 15
@@ -511,7 +514,7 @@ Visualization Manager:
       Update Interval: 0
       Value: false
     - Class: rviz/Image
-      Enabled: false
+      Enabled: true
       Image Topic: /applevision/debug_apple_camera
       Max Value: 1
       Median window: 5
@@ -521,7 +524,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Axes Length: 1
       Axes Radius: 0.10000000149011612
@@ -580,25 +583,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.713202476501465
+      Distance: 3.5164988040924072
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.3158326148986816
-        Y: -0.4399484694004059
-        Z: 0.23192907869815826
+        X: 1.0811594724655151
+        Y: 0.5430632829666138
+        Z: -0.055259138345718384
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.27479609847068787
+      Pitch: 0.49479731917381287
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.648553371429443
+      Yaw: 5.398510456085205
     Saved: ~
 Window Geometry:
   Displays:
