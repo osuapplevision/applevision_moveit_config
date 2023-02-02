@@ -12,13 +12,14 @@ Panels:
         - /Axes1
         - /Axes2
         - /Axes3
+        - /Axes4
+        - /Axes5
         - /CameraPub1
         - /MarkerArray1
         - /Range1
         - /PoseWithCovariance1
         - /PoseWithCovariance1/Covariance1
         - /Image1
-        - /Image1/Status1
         - /Image2
       Splitter Ratio: 0.5307262539863586
     Tree Height: 232
@@ -334,36 +335,36 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: apple_stem
-      Value: true
-    - Class: rviz/Axes
-      Enabled: true
-      Length: 1
-      Name: Axes
-      Radius: 0.009999999776482582
-      Reference Frame: apple_proxy
-      Value: true
-    - Class: rviz/Axes
-      Enabled: true
-      Length: 1
-      Name: Axes
-      Radius: 0.009999999776482582
       Reference Frame: palm
       Value: true
     - Class: rviz/Axes
-      Enabled: false
+      Enabled: true
       Length: 1
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: apple_proxy
-      Value: false
+      Reference Frame: palm_camera
+      Value: true
     - Class: rviz/Axes
-      Enabled: false
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.009999999776482582
+      Reference Frame: tool0
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.009999999776482582
+      Reference Frame: world
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
       Length: 0.5
       Name: Axes
       Radius: 0.009999999776482582
       Reference Frame: base_link
-      Value: false
+      Value: true
     - Class: rviz/Axes
       Enabled: false
       Length: 0.5
@@ -582,25 +583,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.713202476501465
+      Distance: 3.5164988040924072
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.5658795237541199
-        Y: -0.32138702273368835
-        Z: 0.48191723227500916
+        X: 1.0811594724655151
+        Y: 0.5430632829666138
+        Z: -0.055259138345718384
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.08979623019695282
+      Pitch: 0.49479731917381287
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.033548355102539
+      Yaw: 5.398510456085205
     Saved: ~
 Window Geometry:
   Displays:

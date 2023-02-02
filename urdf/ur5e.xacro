@@ -71,7 +71,7 @@
     <parent link="tool0" />
     <child link="palm" />
 <!--        <origin xyz="0 0 0.13" rpy="0 0 0.2618 " />      &lt;!&ndash; Add in Z the hand's thickness (approx 13cm) &ndash;&gt;-->
-    <origin xyz="0 0 .165" rpy="0 0 -1.57 " />      <!-- Add in Z the hand's thickness (approx 13cm) -->
+    <origin xyz="0 0 .165" rpy="0 0 2.44346" />      <!-- Add in Z the hand's thickness (approx 13cm) (with new hand: yaw is -1.57)-->
   </joint>
 
   <!-- <joint name = "apple_proxy" type = "fixed">
