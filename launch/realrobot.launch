@@ -1,0 +1,19 @@
+<launch>
+    <!-- launch robot -->
+    <include file="$(find ur_robot_driver)/launch/ur5e_bringup.launch">
+        <arg name="robot_ip" value="169.254.177.232"/>
+        <arg name="kinematics_config" default="$(find apple_proxy)/calibration/joes_ur5e_calibration.yaml"/>
+    </include>
+
+    <!-- launch setup with moveit -->
+    <include file="$(find applevision_moveit_config)/launch/ur5e_moveit_planning_execution.launch">
+    </include>
+
+    <!-- launch rviz -->
+    <include file="$(find applevision_moveit_config)/launch/moveit_rviz.launch">
+    </include>
+
+    <!-- start camera/sensors -->
+    <include file = "$(find applevision_rospkg)/launch/real_sensor_robot.launch">
+    </include>
+</launch>
