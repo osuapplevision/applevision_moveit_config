@@ -5,6 +5,8 @@
   <!-- The name of the parameter under which the URDF is loaded -->
   <arg name="robot_description" default="robot_description"/>
 
+  <node name="robot_state_publisher2" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
   <!-- Load universal robot description format (URDF) -->
   <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find applevision_moveit_config)/urdf/ur5e.xacro'"/>
 

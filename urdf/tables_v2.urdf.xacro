@@ -46,7 +46,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://applevision_moveit_config/meshes/furniture/collision/UR5_simpleProxy.STL" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://applevision_moveit_config/meshes/apple_proxy/visual/apple_proxy_visual.STL" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="Green">
           <color rgba="0 1 0 0.7"/>
@@ -55,18 +55,18 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://applevision_moveit_config/meshes/furniture/collision/UR5_simpleProxy.STL" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://applevision_moveit_config/meshes/apple_proxy/collision/apple_proxy_collision.STL" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
     </link>
 
 
     <!-- Simplified Version of Lisa's hand -->
-    <!-- <link name="lisas_hand">
+    <link name="lisas_hand">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://applevision_moveit_config/meshes/hand/hand_cylinder.STL" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://applevision_moveit_config/meshes/hand/hand_cylinder.STL" scale="0.001 0.001 0.0012"/>
         </geometry>
         <material name="Black">
           <color rgba="0 0 0 0.5"/>
@@ -78,7 +78,7 @@
           <mesh filename="package://applevision_moveit_config/meshes/hand/hand_cylinder.STL" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
-    </link> -->
+    </link>
 
     <link name="apple_stem" >
       <visual>
@@ -102,8 +102,7 @@
 
     <link name="apple" >
       <visual>
-        <!-- <origin xyz="0 0 0" rpy="0 0 0"/> -->
-        <origin xyz="-.0417815 -.0417815 -.0418201" rpy="0 0 0"/>
+        <origin xyz="-0.037 -0.038 -0.035" rpy="0 0 0"/>
         <geometry>
           <mesh filename="package://applevision_moveit_config/meshes/apple_proxy/visual/SubAssem_Apple_V4.STL" scale="0.001 0.001 0.001"/>
         </geometry>
